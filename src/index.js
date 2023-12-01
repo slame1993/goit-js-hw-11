@@ -119,10 +119,11 @@ async function handleScrollToBottom(entries) {
         }
       }
     } catch (error) {
-      //Notiflix.Notify.failure('');
+      Notiflix.Notify.failure(
+        '444 Sorry, there was an error loading more images. Please try again.'
+      );
     }
   }
-  scrollFunction();
 }
 
 observer.observe(refs.observerElement);
