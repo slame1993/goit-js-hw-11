@@ -101,7 +101,7 @@ async function handleScrollToBottom(entries) {
 
         simpleLightBox.refresh();
 
-        if (searchObjects.totalHits === currentHits || currentHits > 500) {
+        if (searchObjects.totalHits === currentHits) {
           console.log(entry.isIntersecting);
           refs.infoForUser.classList.remove('is-hidden');
         }
@@ -129,7 +129,7 @@ async function handleClick() {
   });
   simpleLightBox.refresh();
 
-  if (searchObjects.totalHits === currentHits) {
+  if (searchObjects.totalHits === currentHits  || currentHits > 500) {
     Notiflix.Notify.info(
       "We're sorry, but you've reached the end of search results."
     );
