@@ -101,7 +101,7 @@ async function handleScrollToBottom(entries) {
 
         simpleLightBox.refresh();
 
-        if (searchObjects.totalHits === currentHits) {
+        if (searchObjects.totalHits === currentHits || currentHits > 500) {
           console.log(entry.isIntersecting);
           refs.infoForUser.classList.remove('is-hidden');
         }
